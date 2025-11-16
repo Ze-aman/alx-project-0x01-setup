@@ -10,7 +10,10 @@ const Users: React.FC<{ posts: UserProps[] }> = ({ posts }) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const handleAddUser = (user: UserData) => {
-    setNewUsers((prev) => [...prev, { ...user, id: posts.length + prev.length + 1 }]);
+    setNewUsers((prev) => [
+      ...prev,
+      { ...user, id: posts.length + prev.length + 1 }
+    ]);
   };
 
   return (
@@ -28,7 +31,7 @@ const Users: React.FC<{ posts: UserProps[] }> = ({ posts }) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {posts?.map((user: UserProps, key: number) => (
+          {posts.map((user: UserProps, key: number) => (
             <UserCard {...user} key={key} />
           ))}
 
@@ -41,7 +44,10 @@ const Users: React.FC<{ posts: UserProps[] }> = ({ posts }) => {
       <Footer />
 
       {isModalOpen && (
-        <UserModal onClose={() => setModalOpen(false)} onSubmit={handleAddUser} />
+        <UserModal
+          onClose={() => setModalOpen(false)}
+          onSubmit={handleAddUser}
+        />
       )}
     </>
   );
