@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Zeamanuel/Documents/Personal/ALX%20Training/ALX%20Frontend%20ProDev%20Projects/alx-project-0x01-setup/alx-project-0x01/pages/index.tsx"],"sourcesContent":["const Home: React.FC = () => {\n  return (\n    <div className=\"flex justify-center items-center h-screen\">\n      <h1 className=\"text-7xl font-thin\">Welcome Page</h1>\n    </div>\n  )\n}\n\n export default Home;"],"names":[],"mappings":";;;;;;AAAA,MAAM,OAAiB;IACrB,qBACE,qKAAC;QAAI,WAAU;kBACb,cAAA,qKAAC;YAAG,WAAU;sBAAqB;;;;;;;;;;;AAGzC;uCAEgB"}}]
+}
